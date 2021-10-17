@@ -3,7 +3,7 @@ const app = express()
 const {port, environment} = require('./env')
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+    res.json({msg: environment})
 })
 
 app.listen(port, () => {
